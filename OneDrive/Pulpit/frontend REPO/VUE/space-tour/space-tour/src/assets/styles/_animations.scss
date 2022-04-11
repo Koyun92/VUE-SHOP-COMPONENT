@@ -1,0 +1,54 @@
+.showUp-enter-active {
+    animation: showUp 0.5s;
+}
+
+.showUp-leave-active {
+    animation: showUp 0.5s reverse;
+}
+
+
+@keyframes showUp {
+    0% {
+        right: -70vw;
+    }
+
+    100% {
+        right: 0;
+    }
+
+}
+
+.appear-enter-active {
+    animation: slideIn .5s reverse;
+
+}
+
+.appear-leave-active {
+    animation: slideIn .5s;
+}
+
+@keyframes slideIn {
+    0% {
+        display: none;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+        pointer-events: none;
+
+    }
+}
+
+@keyframes extend {
+    0% {}
+
+    100% {
+        background-color: $background-btn-hover-animation-end;
+        width: 150%;
+        height: 150%;
+    }
+
+}

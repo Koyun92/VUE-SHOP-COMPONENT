@@ -1,0 +1,153 @@
+.nav {
+    @include flex-config($align-items:center, $justify-content:space-between);
+    padding: 2rem;
+
+
+    &__rectangle {
+        display: none;
+    }
+
+    &__list {
+        padding: 8rem 0 0 2rem;
+        list-style: none;
+    }
+
+    &__item {
+        text-transform: uppercase;
+        letter-spacing: .27rem;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &__link {
+        color: $headings-color;
+        display: block;
+        margin-top: 2rem;
+    }
+
+    &__logo {
+        width: 3rem;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-50%);
+        height: 2rem;
+        z-index:99;
+
+        &-container {
+            position: relative;
+           
+            cursor: pointer;
+        }
+    }
+
+    &__mobile {
+        top: 0;
+        right: 0;
+        width: 70vw;
+        height: 100vh;
+        z-index: 90;
+        backdrop-filter: blur(10px);
+        background-color: $background-menu;
+        position: fixed;
+    }
+
+    &__desktop {
+        display: none;
+    }
+}
+
+@media (min-width:768px) {
+    .nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+
+        &__list {
+            @include flex-config($align-items:center, $justify-content:space-between);
+            padding: 0;
+            list-style: none;
+            width: 62%;
+        }
+
+        &__icon {
+            display: none;
+        }
+
+        &__logo {
+            width: 3.5rem;
+            margin-left: 3rem;
+        }
+
+        &__mobile {
+            display: none;
+        }
+
+        &__item {
+            span {
+                display: none;
+            }
+        }
+
+        .active-view {
+            border-bottom: 2px solid $headings-color
+        }
+
+        &__link {
+            color: $headings-color;
+            display: block;
+            margin-top: 0;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 3rem;
+            transition: .5s;
+
+            &:hover {
+                border-bottom: 2px solid $headings-color
+            }
+        }
+
+        &__desktop {
+            width: 100%;
+            padding: 3rem 3rem 0;
+            background-color: $background-menu;
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .nav {
+        grid-template-columns: 1fr 1.5fr;
+        position: relative;
+        z-index: 2;
+
+        &__desktop {
+            padding: 3rem 3.5rem 0;
+        }
+
+        &__item {
+            span {
+                display: inline-block;
+            }
+        }
+
+        &__link {
+            margin: 0 2rem;
+        }
+
+        &__rectangle {
+            display: block;
+            position: absolute;
+            z-index: 12;
+            top: 50%;
+            left: 8%;
+            width: 35%;
+            height: 2px;
+            background-color: $rectangle-background;
+        }
+    }
+}

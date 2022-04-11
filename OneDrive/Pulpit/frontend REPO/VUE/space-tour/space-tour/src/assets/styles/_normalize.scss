@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.6rem;
+    color: $text-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+    -webkit-transition: background-image 0.3s ease-in-out;
+    transition: background-image 0.3s ease-in-out;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Bellefair', serif;
+    color: $headings-color;
+
+}
+
+.link {
+    text-decoration: none;
+
+}
