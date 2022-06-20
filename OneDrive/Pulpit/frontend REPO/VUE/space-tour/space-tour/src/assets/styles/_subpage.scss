@@ -1,0 +1,13 @@
+.subpage{
+    width: 100%;
+    display: grid;
+    text-align: center;
+ 
+    
+    &__img{
+       img{
+           width: 50%;
+           
+       }
+    }
+}
