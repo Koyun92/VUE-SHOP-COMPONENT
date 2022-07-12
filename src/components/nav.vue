@@ -5,7 +5,7 @@
       flex
       justify-between
       items-center
-      p-2
+      p-2 
     "
   >
     <div class="flex items-center">

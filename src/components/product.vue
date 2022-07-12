@@ -1,6 +1,6 @@
 <template>
   <article>
-    <img
+    <!-- <img
       :src="`${require(`@/assets/images/${products[0].images.normal[0]}`)}`"
       alt=""
     />
@@ -11,8 +11,8 @@
       <h3>{{ products[0].price }}</h3>
       <p>50%</p>
       <h3>{{ products[0].price / 2 }}</h3>
-      <button @click="addToCart(products)">add to cart</button>
-    </section>
+      <button @click="addToCart(products)">add to cart</button> -->
+    <!-- </section> -->
   </article>
 </template>
 
