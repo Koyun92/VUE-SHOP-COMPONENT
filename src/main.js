@@ -2,7 +2,7 @@ import {
     createApp
 } from "vue";
 import App from "./App.vue";
-
+import router from './router'
 
 import {
     createStore
@@ -55,4 +55,4 @@ const store = createStore({
 });
 import('@/assets/styles/main.css');
 import "./assets/tailwind.css";
-createApp(App).use(store).mount("#app");
+createApp(App).use(store).use(router).mount("#app");

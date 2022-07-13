@@ -5,7 +5,7 @@
       flex
       justify-between
       items-center
-      p-2 
+      p-2
     "
   >
     <div class="flex items-center">
@@ -55,11 +55,11 @@
               @click="toggleMenu()"
             />
             <ul class="leading-loose font-bold">
-              <li class="">Collections</li>
-              <li class="">Men</li>
-              <li class="">Women</li>
-              <li class="">About</li>
-              <li class="">Contact</li>
+              <router-link @click="toggleMenu()" to="/Jewelery">
+                <li class="">Jewelery</li></router-link
+              >
+              <li class="">Men's clothing</li>
+              <li class="">Women's clothing</li>
             </ul>
           </nav>
         </transition>
@@ -73,11 +73,11 @@
       "
     >
       <ul class="flex ml-12 items-center h-full">
-        <li class="pr-8 py-8 hover:border-b">Collections</li>
-        <li class="pr-8 py-8">Men</li>
-        <li class="pr-8 py-8">Women</li>
-        <li class="pr-8 py-8">About</li>
-        <li class="pr-8 py-8">Contact</li>
+        <router-link to="/Jewelery">
+          <li class="pr-8 py-8">Jewelery</li></router-link
+        >
+        <li class="pr-8 py-8">Men's clothing</li>
+        <li class="pr-8 py-8">Women's clothing</li>
       </ul>
     </nav>
     <div class="flex h-full items-center">

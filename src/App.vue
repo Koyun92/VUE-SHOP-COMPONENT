@@ -1,6 +1,7 @@
 <template >
   <div class="max-w-screen-xl m-auto">
     <Nav></Nav>
+    <router-view />
     <Product></Product>
     <ProductList></ProductList>
   </div>
