@@ -14,6 +14,7 @@ const store = createStore({
     state: {
         cart: [],
         products: [],
+        categoryProducts: [],
     },
     mutations: {
         ADD_TO_CART(state, {
@@ -32,27 +33,39 @@ const store = createStore({
         }
     },
     actions: {
-        addToCart({
+        addToCart: ({
             commit
         }, {
             products,
             quantity
-        }) {
+        }) => {
             commit('ADD_TO_CART', {
                 products,
                 quantity
             });
         },
-        getProducts({
+        getProducts: ({
             commit
-        }) {
+        }) => {
             axios.get('https://fakestoreapi.com/products')
                 .then(response => {
                     commit('SET_PRODUCTS', response.data);
                 })
         }
+    },
+    getters: {
+        categoriesGetter: (state) => (category) => {
+            return state.products.filter((product) => {
+                if (product.category === category) {
+                    return true;
+                }
+            })
+
+        }
     }
 });
 import('@/assets/styles/main.css');
 import "./assets/tailwind.css";
+
+
 createApp(App).use(store).use(router).mount("#app");
