@@ -55,11 +55,7 @@ const store = createStore({
     },
     getters: {
         categoriesGetter: (state) => (category) => {
-            return state.products.filter((product) => {
-                if (product.category === category) {
-                    return true;
-                }
-            })
+            return state.products.filter((product) => product.category === category)
 
         }
     }

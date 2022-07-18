@@ -15,10 +15,9 @@ export default {
         }
       })
     );
-    const categoryProducts = computed((store) =>
-      store.getters.categoriesGetter("jewelery")
-    );
-    return { products, categoryProducts };
+    const jeweleryItems = store.getters.categoriesGetter("jewelery");
+
+    return { products, jeweleryItems };
   },
 };
 </script>
