@@ -58,8 +58,12 @@
               <router-link @click="toggleMenu()" to="/Jewelery">
                 <li class="">Jewelery</li></router-link
               >
-              <li class="">Men's clothing</li>
-              <li class="">Women's clothing</li>
+              <router-link @click="toggleMenu()" to="/MensClothing">
+                <li class="">Men's clothing</li></router-link
+              >
+              <router-link @click="toggleMenu()" to="/WomenClothing">
+                <li class="">Women's clothing</li></router-link
+              >
             </ul>
           </nav>
         </transition>
@@ -76,8 +80,12 @@
         <router-link to="/Jewelery">
           <li class="pr-8 py-8">Jewelery</li></router-link
         >
-        <li class="pr-8 py-8">Men's clothing</li>
-        <li class="pr-8 py-8">Women's clothing</li>
+        <router-link to="/MensClothing">
+          <li class="pr-8 py-8">Men's clothing</li></router-link
+        >
+        <router-link to="/WomenClothing">
+          <li class="pr-8 py-8">Women's clothing</li></router-link
+        >
       </ul>
     </nav>
     <div class="flex h-full items-center">
