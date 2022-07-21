@@ -1,21 +1,27 @@
-<template>sas</template>
+<template>
+  <ul>
+    <li v-for="product in categoryItems" :key="product.id">
+      <h2>{{ product.title }}</h2>
+      <img :src="product.image" alt="" />
+      <p>{{ product.description }}</p>
+      <button>add to cart</button>
+    </li>
+  </ul>
+</template>
 
 <script>
+import { useRoute } from "vue-router";
 import { useStore } from "vuex";
-import { computed } from "@vue/runtime-core";
-import { onMounted } from "vue";
+
 export default {
   name: "ProductList",
   setup() {
+    const route = useRoute();
     const store = useStore();
-    const products = computed(() => store.state.products);
 
-    store.dispatch("getProducts");
+    const categoryItems = store.getters.categoriesGetter(route.name);
 
-    onMounted(() => {
-      console.log(`the component is now mounted.`);
-    });
-    return [products];
+    return { route, categoryItems };
   },
 };
 </script>
