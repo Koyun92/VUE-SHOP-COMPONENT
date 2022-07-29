@@ -1,0 +1,198 @@
+    // font-family: 'Arimo', sans-serif;
+
+    // font-family: 'Lexend Deca', sans-serif;
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+}
+h1,
+h2,
+h3{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400; 
+}
+.button{
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+      font-weight: 400;
+    border-radius: 2.4rem;
+    border: 3px solid #e5007d;
+    background-color: #eff3f6;
+    color: #e5007d; 
+  
+    cursor: pointer;
+    &:hover{
+        background-color: #e5007d; 
+        color: #eff3f6;
+    }
+        
+}
+
+.cta-card{
+
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 27rem 1fr 1fr 1fr;
+    grid-template-rows: 1fr 44.3rem 1fr  1fr;
+    max-width: 50rem;
+    height: 114.8rem;
+    text-align: center;
+    border: 2px solid #06b7e2;
+    filter: drop-shadow(0 0 10.5px rgba(28,29,29,0.27));
+    &__header{
+        grid-column: 4/5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      
+    
+      
+    }
+    &__title{
+        font-size: 2.7rem;
+        letter-spacing: .1rem;
+        line-height: 3.6rem;
+        color: #012973;
+    }
+    &__body{
+        
+        grid-column: 4/5;
+        min-height: 44.3rem;
+        min-width: 27rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+     
+      
+        
+    }
+    &__copy{
+        line-height: 2.8rem;
+        color: #012973;
+        &--gray{
+            color:#5d5f6b;
+        }
+    }
+    &__actions{
+        grid-column: 4/5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+       
+    }
+    &__img{
+        max-width: 30%;
+    }
+    &__aside{
+       grid-column: 1/8;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       background-image: url("../img/psi-balagan.png");
+       background-size: cover;
+       background-position: center;
+    }
+    &__subtitle{
+        font-size: 2.4rem;
+        max-width: 27rem;
+        letter-spacing: .1rem;
+        line-height: 2.2rem;
+        color: #06b7e2;
+        font-weight: 400;
+font-family: "Lexend Deca";
+
+    }
+
+}
+@media(min-width:1200px){
+   .cta-card{
+    text-align: left;
+    max-width: 1400px;
+    max-height: 658px;
+    grid-template-rows: 1fr 1fr 1fr 12rem 12rem 12rem 1fr;
+    grid-template-columns:12rem 1fr 24rem 1fr 24rem 1fr 50%;
+    &__header{
+        grid-column: 3/6;
+        grid-row: 2/3;
+    }
+    &__body{
+        display: grid;
+        grid-column: 3/6;
+        grid-row: 4/6;
+        grid-template-columns: subgrid;
+        grid-template-rows: subgrid;
+    }
+  
+   
+    &__copy{
+        &:nth-child(1){
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        &:nth-child(2){
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        &:nth-child(3){
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
+        &:nth-child(4){
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            grid-column: 3/4;
+            grid-row: 2/3;
+        }
+    }
+    &__actions{
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-template-rows: subgrid;
+        grid-column: 3/6;
+        grid-row: 6/7;
+    }
+    &__button{
+        
+        grid-column: 3/6;
+        grid-row: 6/7;
+    }
+    &__aside{
+        display: grid;
+        grid-template-rows: subgrid;
+        
+        grid-column: 7/8;
+        grid-row: 1/8;
+    }
+    &__subtitle{
+        max-width: none;
+        grid-row: 6/7;
+        grid-column: 7/8;
+    }
+    }
+   
+   } 
+
